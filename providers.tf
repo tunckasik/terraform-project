@@ -4,7 +4,6 @@ terraform {
       source  = "hashicorp/azurerm"
       version = "3.36.0"
     }
-    aws = {}
   }
   backend "remote" {
     organization = "bronzelab"
@@ -12,5 +11,10 @@ terraform {
     workspaces {
       name = "terraform-project"
     }
+  }
+}
+provider "azurerm" {
+  features{
+    
   }
 }
